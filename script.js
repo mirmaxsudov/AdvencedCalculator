@@ -258,8 +258,10 @@ function backspace() {
         return
     }
 
-    if (!value.length)
+    if (!value.length) {
+        result.innerText = '0'
         return
+    }
 
     input.value = value.slice(0, -1)
 }
