@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Calculator by Abdurahmon</title>
+</head>
+
+<body>
+
+    <main id="main">
+        <div class="container">
+            <div class="wrapper d-flex justify-content-center align-items-center">
+                <div class="calculator">
+                    <div class="calculator__header">
+                        <div class="header__top">
+                            <div class="header__time">9:41</div>
+                            <div class="header__top-right">
+                                <div class="connection__wrapper">
+                                    <div id="connection-1" class="connection"></div>
+                                    <div id="connection-2" class="connection"></div>
+                                    <div id="connection-3" class="connection"></div>
+                                    <div id="connection-4" class="connection"></div>
+                                </div>
+                                <div class="wifi__wrapper">
+                                    <i class="bi bi-wifi"></i>
+                                </div>
+                                <div class="battery__wrapper">
+                                    <div class="battery__body">
+                                        <div class="battery__power"></div>
+                                    </div>
+                                    <div class="battery__right"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calculator__body">
+                        <div class="body__wrapper">
+                            <div class="body__top">
+                                <div class="body__input">
+                                    <input type="text" id="input" readonly>
+                                </div>
+                                <div class="body__result">
+                                    <p id="result">0</p>
+                                </div>
+                            </div>
+                            <div class="body__bottom">
+                                <span onclick="backspace()">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <rect width="24" height="24" fill="url(#pattern0_1_94)" />
+                                        <defs>
+                                            <pattern id="pattern0_1_94" patternContentUnits="objectBoundingBox"
+                                                width="1" height="1">
+                                                <use xlink:href="#image0_1_94" transform="scale(0.02)" />
+                                            </pattern>
+                                            <image id="image0_1_94" width="50" height="50"
+                                                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAABn0lEQVRoge2YrU4DQRSFv8OPIxCeAV0LEkUQGGoQYCqQ8Ai8BBoBoogiwBIUEpJiEGB4BQgEV8hBsKQ/lC3dnW7JMl+y5s7m5J7MvXdmFyKRSCQSiZQH9QZsTwMzY8hlGF4ltToDU31eWgNOi8knM1XgrDMwMaZEglMaI/1Kq5NbYLmIRH7BJVD5aXGQkXdJT2HzyYbt97T10pTWSIzYXhiFbhrBjdjeAO5s74TWTiOoEdtbwDEwDezb3g6pn0YwI8lOHAKTSeiFz6lXCEGMJCbqtKfgM7Aq6SqE/m/IbeQvmIDB50gqSU8c0S4ngGugars6pNyJpGbWXDIbsb1Od098sZI8w3IPZDZSmgMx845IOrNd43tpXQA3GSRzTbhcPSKpbrtFd7MvAntFN3vu0pLUALaAtyQ0B5zbXsqrPQxBeuQvmAnW7ImZGvB13Z4l5fshNEGnlqQ6sAm0gF1JByH108jV7P2Q1LDdlPQQWjuNkZwjRZuAf3QgTtqeLySTwfRehboYZKQCPIbLZXSUprRKY6Q0P7EjkUgkEomUiQ/BLHIieAX9vgAAAABJRU5ErkJggg==" />
+                                        </defs>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calculator__footer">
+                        <hr>
+                        <div class="footer__wrapper">
+                            <div class="col red-bg">C</div>
+                            <div class="col col-green">()</div>
+                            <div class="col col-green">%</div>
+                            <div class="col col-green">/</div>
+                            <div class="col col-white">7</div>
+                            <div class="col col-white">8</div>
+                            <div class="col col-white">9</div>
+                            <div class="col col-green">*</div>
+                            <div class="col col-white">4</div>
+                            <div class="col col-white">5</div>
+                            <div class="col col-white">6</div>
+                            <div class="col col-green">-</div>
+                            <div class="col col-white">1</div>
+                            <div class="col col-white">2</div>
+                            <div class="col col-white">3</div>
+                            <div class="col col-green">+</div>
+                            <div class="col col-white">+/-</div>
+                            <div class="col col-white">0</div>
+                            <div class="col col-white">.</div>
+                            <div class="col green-bg">=</div>
+                        </div>
+                        <div class="footer__line">
+                            <div onclick="closeWindow()" class="bottom__line"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="./script.js"></script>
+
+</html>
