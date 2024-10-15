@@ -16,6 +16,7 @@
             #66FF7F 4%,
             #1d3849 100%);
     padding: 30px 0;
+    position: relative;
 }
 
 .container {
@@ -219,4 +220,22 @@
 .green-bg {
     background-color: #66FF7F;
     color: #343434;
+}
+
+.short__info {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 40px;
+}
+
+h1 {
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: #66FF7F;
+    font-size: 18px;
+    font-weight: 500;
 }
