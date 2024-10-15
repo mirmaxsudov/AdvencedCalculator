@@ -223,10 +223,11 @@
 }
 
 .short__info {
+    text-align: right;
+    width: 100%;
+    padding: 30px;
+    padding-top: 0;
     position: absolute;
-    top: 0;
-    right: 0;
-    padding: 40px;
 }
 
 h1 {
@@ -238,4 +239,20 @@ a {
     color: #66FF7F;
     font-size: 18px;
     font-weight: 500;
+}
+
+@media screen and (max-width: 1200px) {
+    .calculator {
+        margin-top: 100px;
+    }
+
+    .short__info {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .calculator {
+        margin-top: 120px;
+    }
 }
