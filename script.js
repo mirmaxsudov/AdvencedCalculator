@@ -33,14 +33,17 @@ function batteryAnimation() {
                 break;
             }
         }
-    }, 1000)
+    }, 3000)
 }
 
 function startTimer() {
     setInterval(() => {
         const now = new Date();
-        timer.innerText = `${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`
-    }, 3000)
+        const hours = now.getHours() < 10 ? '0' + now.getHours() : now.getHours();
+        const minutes = now.getMinutes() < 10 ? '0' + now.getMinutes() : now.getMinutes();
+        const seconds = now.getSeconds() < 10 ? '0' + now.getSeconds() : now.getSeconds();
+        timer.innerText = `${hours}:${minutes}:${seconds}`
+    }, 1000)
 }
 
 function giveAddEventListenerToAllButtons() {

@@ -148,7 +148,15 @@
     background-color: #151515;
 }
 
-.body__result {}
+.body__result {
+    overflow-x: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.body__result::-webkit-scrollbar {
+    display: none;
+}
 
 .body__bottom {
     text-align: right;
