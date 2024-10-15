@@ -8,13 +8,39 @@ window.onload = () => {
     timer.innerText = `${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`
     giveAddEventListenerToAllButtons()
     startTimer()
+    batteryAnimation()
+}
+
+function batteryAnimation() {
+    setInterval(() => {
+        const random = Math.floor(Math.random() * 3)
+        const battery = document.querySelector('.battery__power')
+
+        switch (random) {
+            case 0: {
+                battery.style.backgroundColor = '#66FF7F'
+                battery.style.width = '100%'
+                break;
+            }
+            case 1: {
+                battery.style.backgroundColor = 'yellow'
+                battery.style.width = '50%'
+                break;
+            }
+            case 2: {
+                battery.style.backgroundColor = 'red'
+                battery.style.width = '25%'
+                break;
+            }
+        }
+    }, 1000)
 }
 
 function startTimer() {
     setInterval(() => {
         const now = new Date();
         timer.innerText = `${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`
-    }, 1000)
+    }, 3000)
 }
 
 function giveAddEventListenerToAllButtons() {
@@ -128,6 +154,12 @@ function equal() {
 }
 
 function calculateMainResult() {
+    if (+eval(input.value) === 0) {
+        result.innerText = '0'
+        input.value = ''
+        return
+    }
+
     result.innerText = eval(input.value)
 }
 
@@ -216,6 +248,12 @@ function dot() {
 
 function backspace() {
     const value = input.value
+
+    if (value == 'Infinity') {
+        result.innerText = '0'
+        input.value = ''
+        return
+    }
 
     if (!value.length)
         return
